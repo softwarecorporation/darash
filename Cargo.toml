@@ -4,7 +4,7 @@ version = "0.8.0"
 edition = "2021"
 license = "ISC"
 description = "All-in-one research crate: async search, page fetch, and HTML extraction with no API keys"
-repository = "https://github.com/tschk/darash"
+repository = "https://github.com/softwarecorporation/darash"
 keywords = ["search", "searxng", "http", "async", "cli"]
 categories = ["api-bindings", "web-programming::http-client"]
 

@@ -2,7 +2,7 @@
 
 > The all-in-one research crate: async web search, page fetch, and HTML extraction in one Rust dependency. No API keys.
 
-Darash (crates.io: `darash`, repo: https://github.com/tschk/darash) implements the research loop for agents:
+Darash (crates.io: `darash`, repo: https://github.com/softwarecorporation/darash) implements the research loop for agents:
 
 - **Search**: `SearchClient::local()` runs an in-process multi-source backend by default; `SearchClient::new(endpoint)` targets any SearxNG-compatible endpoint. `SearchRequest` carries a Vane-compatible mode (speed/balanced/quality) and sources (web/academic/discussions); responses project into citations without an AI provider.
 - **Fetch**: `darash::fetch::fetch(url, headers)` (a thin wrapper over `fetch_with(url, FetchOptions)`) returns a `FetchReport` with status, final URL, redirected flag, elapsed ms, content type, size, and body. Never silent, even on error statuses; bodies capped at 2 MiB (`FetchOptions::max_bytes` overrides). Options cover method, request body, basic auth, insecure TLS, and timeout. `fetch::read_source(path)` does the same for local files. `fetch::locate(html, text)` returns the deepest elements holding the text as CSS selector paths with snippets; `fetch::paginate(total, offset, limit)` returns `PageMeta` (`more`/`complete`/`past_end`).
@@ -20,4 +20,4 @@ Hosted API: https://darash.tsc.hk exposes the same search + fetch loop over HTTP
 
 Limits: 15 s search timeout (configurable via `SearchConfig::with_timeout`), 256 KiB search response cap, 2 MiB fetch body cap (override with `--max-bytes`), queries ≤ 512 chars, http/https only, no embedded credentials.
 
-License: ISC. Homepage: https://github.com/tschk/darash — landing page: https://tschk.github.io/darash/
+License: ISC. Homepage: https://github.com/softwarecorporation/darash — landing page: https://tschk.github.io/darash/
