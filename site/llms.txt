@@ -20,4 +20,4 @@ Hosted API: https://darash.tsc.hk exposes the same search + fetch loop over HTTP
 
 Limits: 15 s search timeout (configurable via `SearchConfig::with_timeout`), 256 KiB search response cap, 2 MiB fetch body cap (override with `--max-bytes`), queries ≤ 512 chars, http/https only, no embedded credentials.
 
-License: ISC. Homepage: https://github.com/softwarecorporation/darash — landing page: https://tschk.github.io/darash/
+License: ISC. Homepage: https://github.com/softwarecorporation/darash — landing page: https://darash.tsc.hk
